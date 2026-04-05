@@ -1,15 +1,35 @@
+# version: 0.2
+
+# phases:
+#   install:
+#     commands:
+#       - echo Installing...
+#       - pip install flask pytest
+
+#   build:
+#     commands:
+#       - echo Running tests...
+#       - pytest
+
+# artifacts:
+#   files:
+#     - '**/*'
+
 version: 0.2
 
 phases:
   install:
     commands:
-      - echo Installing...
+      - echo "===== INSTALL PHASE ====="
+      - python --version
+      - pip --version
       - pip install flask pytest
 
   build:
     commands:
-      - echo Running tests...
-      - pytest
+      - echo "===== BUILD PHASE ====="
+      - ls -la
+      - pytest -v
 
 artifacts:
   files:
