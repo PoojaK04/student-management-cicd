@@ -3,16 +3,11 @@ version: 0.2
 phases:
   install:
     commands:
-      - echo "===== INSTALL PHASE ====="
-      - python --version
-      - pip --version
       - pip install flask pytest
 
   build:
     commands:
-      - echo "===== BUILD PHASE ====="
-      - ls -la
-      - pytest -v
+      - python -m pytest
 
 artifacts:
   files:
